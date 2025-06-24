@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful VietQR Payment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .qr-wrapper {
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      padding: 40px 30px;
+      border-radius: 25px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      border: 4px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+
+    .qr-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -4px; left: -4px; right: -4px; bottom: -4px;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #007bff, #fd7e14, #6f42c1, #20c997);
+      background-size: 300% 300%;
+      animation: animateBorder 6s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes animateBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .qr-wrapper h2 {
+      font-size: 26px;
+      color: #343a40;
+      margin-bottom: 10px;
+    }
+
+    .qr-wrapper p.subtitle {
+      font-size: 16px;
+      color: #6c757d;
+      margin-bottom: 25px;
+    }
+
+    .qr-wrapper img {
+      width: 250px;
+      height: auto;
+      border-radius: 12px;
+      border: 3px solid #007bff;
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+      margin-bottom: 25px;
+    }
+
+    .info-box {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.03);
+      text-align: left;
+      font-size: 16px;
+      color: #343a40;
+    }
+
+    .info-box p {
+      margin: 10px 0;
+    }
+
+    .info-box span {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .qr-wrapper {
+        padding: 25px 20px;
+      }
+
+      .qr-wrapper h2 {
+        font-size: 22px;
+      }
+
+      .info-box p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="qr-wrapper">
+    <h2>Scan to Pay</h2>
+    <p class="subtitle">Use your banking app to scan this VietQR code</p>
+
+    <img src="https://files09.oaiusercontent.com/file-SmnkGVzpk3ScovehRW8JE3?se=2025-06-24T17%3A54%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D%25E1%25BA%25A2nh%2520ch%25E1%25BB%25A5p%2520m%25C3%25A0n%2520h%25C3%25ACnh%25202025-06-20%2520014654.png&sig=kaQq3zDDqiiw%2BResX99cteyNIGvgpXXLEC8iR/avkxw%3D" alt="MB Bank QR Code Payment">
+
+    <div class="info-box">
+      <p><strong>Account Holder:</strong> <span>NGUYEN HIEU HOC</span></p>
+      <p><strong>Account Number:</strong> <span>0375750406</span></p>
+      <p><strong>Bank:</strong> MB Bank (Military Commercial Joint Stock Bank)</p>
+    </div>
+  </section>
+
+</body>
+</html>
